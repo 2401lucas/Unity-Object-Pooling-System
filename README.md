@@ -1,6 +1,7 @@
 # Unity-Object-Pool
-A singleton object pooler for all of your optimization.
-Currently to get the Object you need to know the position in the pool, will be changed to either use the position or the name.
+A singleton object pooler for all of your optimization. It can handle all of the object pooling during the game loading and is persistant throughout scenes
+
+Currently to get the objects from the pool you need to know the position in the pool, will be changed to either use the position or the name.
 
 ## In the Editor
 ![image](https://user-images.githubusercontent.com/32739337/102151045-4fa96100-3e48-11eb-9bed-7c8a8cb7eb8f.png)
