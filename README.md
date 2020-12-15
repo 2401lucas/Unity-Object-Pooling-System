@@ -21,7 +21,7 @@ GameObject GO = ObjectPooler.Instance.GetGameObject(/*Index of the Pooled Object
  //Make changes to your gameObject here
  ```
  
-## In the Editor
+# In the Editor
 ![image](https://user-images.githubusercontent.com/32739337/102151045-4fa96100-3e48-11eb-9bed-7c8a8cb7eb8f.png)
 
 Here we have the option to enable debugging and to assign new objects to the pool
