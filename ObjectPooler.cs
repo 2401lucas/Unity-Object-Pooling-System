@@ -32,19 +32,10 @@ public class ObjectPooler : MonoBehaviour
 
     void Start()
     {
-        Initialize();
-        //StartCoroutine(Test());
+        //Initialize();
     }
 
-    IEnumerator Test()
-    {
-        yield return new WaitForSeconds(0.5f);
-        print(GetGameObject(0).name);
-        yield return new WaitForSeconds(0.5f);
-        print(GetGameObject(1).name);
-
-        yield return null;
-    }
+    //Call to Initialize the pool
     public void Initialize()
     {
         if (debug) {print("Pooling has started"); timer = Time.realtimeSinceStartup; } 
@@ -121,6 +112,5 @@ public struct GameObjectToBePooled
     public GameObject gameObjectToBePooled;
 
     [Header("Settings")] 
-    public bool lazyInstantiation;
     public bool loadMoreIfNoneLeft;
 }
