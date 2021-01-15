@@ -1,7 +1,7 @@
 # Unity-Object-Pool
 A very simple singleton object pooler for optimization. It can handle all of the object pooling during the game loading and is persistant throughout scenes
 
-Currently to get the objects from the pool you need to know the index in the pool, will be changed to either use the position or the name.
+Currently to get the objects from the pool you need to know the index in the pool, will be changed to use the name.
 # What is pooling? 
 It is computationally expensive to instantiate and destroy objects like bullets that get re-used a lot.
 Its a lot more effective to instantiate them all in the beginning and to keep re-using them by setting them active/false
