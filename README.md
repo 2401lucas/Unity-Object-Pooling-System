@@ -12,7 +12,8 @@ Queue is benificial to use because it acts similar to a LinkedList in C++. With 
 
 ## The Setup
 1) Create a new script, call it what you want your pool to be named, IE a enemy pool could be called EnemyPool.cs and attach it to a GameObject
-2) In the script, we will follow the example below. The script will inherite from GenericObjectPool.cs, we will then give it a component type, such as ObjectTobePooled.cs, this could be any script or component that is attachable to a GameObject. 
+2) In the script, we will follow the example below. The script will inherite from GenericObjectPool.cs, we will then give it a component type, such as ObjectTobePooled.cs, this could be any script or component that is attachable to a GameObject. We also need to override the virtual function AddPoolReference(), we want to copy this snipped of code. The interface we are accessing doesn't exist yet, so that is our next step.
+
 ```
 public class GenericPool : GenericObjectPool<ObjectTobePooled>
 {
@@ -20,7 +21,7 @@ public class GenericPool : GenericObjectPool<ObjectTobePooled>
 }
 ```
 
-3) We then need to override the virtual function AddPoolReference(), on every object that will be pooled, we want to this snipped of code. This creates an Interface that we access to give the pooled object the reference to the pool that it belongs to. This is done so that all we need to do is call pool.Recycle() when the object is no longer needed and it will know the proper pool to Recycle the object into.   
+3) We now create the interface on every object that will be pooled. We access the interface to give the pooled object the reference to the pool that it belongs to. This is done so that all we need to do is call pool.Recycle() when the object is no longer needed and it will know the proper pool to Recycle the object into.   
 
 ```
 internal interface IObjectPool
